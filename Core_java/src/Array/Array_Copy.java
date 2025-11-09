@@ -1,0 +1,22 @@
+package Array;
+
+public class Array_Copy {
+public static void main(String[] args) {
+		
+		int a[] = {10,20,30,40,50,60,70,80,90};
+		int a1[]= {10,52,68,989,45,65,65};
+		int b[]=new int[a.length+a1.length];
+		
+		for(int i=0;i<a.length;i++) {
+			b[i]=a[i];
+		}
+		for(int i=0;i<a1.length;i++) {
+		    b[a.length+i]=a1[i];
+		}
+		for (int i = 0; i < b.length; i++) {
+			System.out.println(b[i]);
+		}
+	}
+
+
+}
