@@ -1,4 +1,4 @@
-package STRING;
+package Imp_Classes;
 
 public class StringBuffer_Bulider {
 	public static void main(String[] args) {

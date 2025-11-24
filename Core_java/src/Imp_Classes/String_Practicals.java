@@ -1,4 +1,4 @@
-package STRING;
+package Imp_Classes;
 
 public class String_Practicals {
 	public static void main(String[] args) {
@@ -14,14 +14,16 @@ public class String_Practicals {
 		String words[] = s.split(" ");
 	for(int i=words.length-1;i>=0;i--)
 		{
-			System.out.println(words[i]+" ");
+			System.out.print(words[i]+" ");
+			System.out.println();
 	}
 	
 		System.out.println("*****************");
 		char ch[] = s.toCharArray();
 		for(int i=ch.length-1;i>=0;i--)
 		{
-			System.out.println(ch[i]);
+			System.out.print(ch[i]);
+			System.out.println();
 		}
 		
 		System.out.println("*******************");

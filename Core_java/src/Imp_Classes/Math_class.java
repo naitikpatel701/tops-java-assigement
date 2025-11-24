@@ -1,4 +1,4 @@
-package STRING;
+package Imp_Classes;
 
 import java.util.Date;
 import java.util.Random;

@@ -1,0 +1,26 @@
+package Collection;
+
+import java.util.HashMap;
+
+public class Char_Count {
+	public static void main(String[] args) {
+		
+		String str="hello  java ";
+		HashMap<String,Integer> map=new HashMap<String, Integer>();
+		
+		String words[]=str.split("");
+		for(int i=0;i<words.length;i++) {
+			
+			if(map.get(words[i])==null) {
+				map.put(words[i], 1);
+			}
+			else {
+			     int value=map.get(words[i]);
+			     value++;
+			     map.put(words[i], value);
+			}
+			System.out.println(map);
+		}
+	}
+
+}

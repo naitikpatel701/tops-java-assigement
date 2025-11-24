@@ -1,8 +1,7 @@
-package STRING;
+package assignment;
 
 public class STRING {
-	
-public static void main(String[] args) {
+	public static void main(String[] args) {
 		
 		String s="racecar";
 				

@@ -1,4 +1,4 @@
-package STATEMENTS;
+package assignment;
 
 import java.util.Scanner;
 

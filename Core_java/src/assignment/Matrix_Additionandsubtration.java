@@ -1,8 +1,7 @@
-package Array;
+package assignment;
 
 public class Matrix_Additionandsubtration {
-	
-public static void main(String[] args) {
+	public static void main(String[] args) {
 		
 		int a[][]= {{4,5},{7,8}};
 		

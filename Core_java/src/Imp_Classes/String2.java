@@ -1,4 +1,4 @@
-package STRING;
+package Imp_Classes;
 
 public class String2 {
 	public static void main(String[] args) {

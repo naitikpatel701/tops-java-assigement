@@ -1,9 +1,9 @@
-package OOPs;
+package assignment;
 
 class studentDetali{
 	
 	String name="naitik";
-	int age=21;
+	int age=22;
 	
 	public void display() {
 		System.out.println(name+" "+age);
