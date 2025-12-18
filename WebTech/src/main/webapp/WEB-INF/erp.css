@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+*{
+   padding: 0;
+   margin: 0;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: aquamarine;
+background: #2a9b9b;
+background: linear-gradient(90deg,rgba(42, 155, 155, 1) 0%, rgba(36, 206, 212, 1) 56%, rgba(237, 221, 83, 1) 100%);
+}
+
+header{
+    width: 100%;
+    height: 15%;
+    background-color:black;
+}
+
+footer{
+    width: 100%;
+    height: 15%;
+    background-color: black;
+    color:  #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo{
+    width: 20%;
+    height: 100%;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title{
+      width: 80%;
+      height: 100%;
+      float: right;
+      color: #ffffff;
+      font-size: 36px;
+      font-weight: bold;
+      font-family: 'Comic sans ms', cursive;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+
+.login{
+    width: 20%;
+    height: 50%;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px;
+    background: #3F5EFB;
+background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+    color: white;
+}
+
+.tf{
+    width: 150px;
+    height: 30px;
+    border: 1px solid black;
+}
+
+.btn{
+    width: 73px;
+    height: 30px;
+    border: 1px solid black;
+}

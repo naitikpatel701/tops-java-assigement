@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="stylesheet" href="style.css">
+<style>
+    .tf{
+
+        height: 30px;
+        width: 150px;
+        border: 1px solid black;
+        border-radius: 5px;
+        background-color: brown;
+        color: black;
+        box-shadow: 2px 5px;
+    }
+</style>
+</head>
+<body>
+
+    <fieldset>
+        <legend>Registration Table </legend>
+        <form action="" method="post">
+        
+    <label for="uname">Username</label>
+    <input type="text" id="uname" name="uname" class="tf">
+
+    <br><br>
+
+    <label for="email">Email</label>
+    <input type="text" id="email" name="email" class="tf">
+
+    <br><br>
+
+    <label for="pass">Password</label>
+    <input type="password" id="pass" name="pass" class="tf">
+
+    <br><br>
+
+    <label for="">Gender</label>
+    <input type="radio" name="gender" value="male" checked>male
+    <input type="radio" name="gender" value="female" >female 
+
+    <br><br>
+
+    <label for="">languages</label>
+    <input type="checkbox" name="lang" value="Eng">English
+    <input type="checkbox" name="lang" value="Guj">Gujarati
+    <input type="checkbox" name="lang" value="Hin">Hindi
+
+    <br><br>
+    <label for="">phone</label>
+    <input type="number" name="number" >
+
+    <br><br>
+    <label for="">Brith Date</label>
+    <input type="date" name="date" >
+
+    <br><br>
+    <label for="">color</label>
+    <input type="color" name="color">
+
+    <br><br>
+    <label for="">Country</label>
+    <select name="country" id="">
+    <option value="1">India</option>
+    <option value="2">USA</option>
+    <option value="3">Canada</option>
+    <option value="4">UAE</option>
+    </select>
+
+    <br><br>
+    <label for="">Address</label>
+    <textarea name="adr" id=""></textarea>
+
+    <br>
+    <br>
+    <input type="submit">
+    <input type="reset">
+    </form>
+
+    </fieldset>
+
+</body>
+</html>
