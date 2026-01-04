@@ -29,7 +29,7 @@ public class IndexServlet extends HttpServlet {
 		
 	//	req.getRequestDispatcher("demo").forward(req, resp);
 		
-		resp.sendRedirect("Index.jsp");
+	resp.sendRedirect("Index.jsp");
 	}
 
 }

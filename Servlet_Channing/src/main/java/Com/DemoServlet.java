@@ -17,9 +17,10 @@ public class DemoServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		PrintWriter pw=resp.getWriter();
-		pw.write("<h1> Demo success</h1>");
+		pw.write("<h1>Demo Success</h1>");
 		
-		req.getRequestDispatcher("Index.jsp").include(req, resp);
+		req.getRequestDispatcher("Demo").include(req, resp);
 	}
-
+	
+	
 }

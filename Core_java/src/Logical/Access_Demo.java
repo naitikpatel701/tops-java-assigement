@@ -10,8 +10,7 @@ public class Access_Demo extends Access {
 	}
        public static void main(String[] args) {
 		
-    	   Access ac=new Access();
-    	   
-    	   ac.disp();
+//    	   Access ac=new Access();
+//    	   ac.disp();
 	}
 }
