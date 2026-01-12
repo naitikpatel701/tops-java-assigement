@@ -4,7 +4,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class A044_File {
+public class A043_File {
 	public static void main(String[] args) {
 		
 		String SourceFile   = "D:\\full stack developer corurce\\28 AUG-java\\file\\Hello.txt";

@@ -26,7 +26,7 @@
                   <%
                     User u= (User)session.getAttribute("user");
                         if(u!=null){
-    	            request.setAttribute("err", "alredy login ");
+    	            request.setAttribute("err", "logout  ");
     	            request.getRequestDispatcher("home.jsp").forward(request, response);
     	   
        }
