@@ -142,7 +142,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="MVC_CRUD3" path="/MVC_CRUD3" reloadable="true" source="org.eclipse.jst.jee.server:MVC_CRUD3"/><Context docBase="Learning_Filter" path="/Learning_Filter" reloadable="true" source="org.eclipse.jst.jee.server:Learning_Filter"/><Context docBase="Authentication" path="/Authentication" reloadable="true" source="org.eclipse.jst.jee.server:Authentication"/><Context docBase="jsp_lerning" path="/jsp_lerning" reloadable="true" source="org.eclipse.jst.jee.server:jsp_lerning"/><Context docBase="JSTL" path="/JSTL" reloadable="true" source="org.eclipse.jst.jee.server:JSTL"/></Host>
+      <Context docBase="MVC_CRUD3" path="/MVC_CRUD3" reloadable="true" source="org.eclipse.jst.jee.server:MVC_CRUD3"/><Context docBase="Learning_Filter" path="/Learning_Filter" reloadable="true" source="org.eclipse.jst.jee.server:Learning_Filter"/><Context docBase="Authentication" path="/Authentication" reloadable="true" source="org.eclipse.jst.jee.server:Authentication"/><Context docBase="jsp_lerning" path="/jsp_lerning" reloadable="true" source="org.eclipse.jst.jee.server:jsp_lerning"/><Context docBase="JSTL" path="/JSTL" reloadable="true" source="org.eclipse.jst.jee.server:JSTL"/><Context docBase="Ajex_Learning" path="/Ajex_Learning" reloadable="true" source="org.eclipse.jst.jee.server:Ajex_Learning"/><Context docBase="H002_Hibernateweb" path="/H002_Hibernateweb" reloadable="true" source="org.eclipse.jst.j2ee.server:H002_Hibernateweb"/></Host>
     </Engine>
   </Service>
 </Server>

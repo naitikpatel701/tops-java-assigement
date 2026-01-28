@@ -1,7 +1,7 @@
 package assignment;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 
 public class A043_File {
@@ -11,16 +11,16 @@ public class A043_File {
 		String destinationFile= "D:\\full stack developer corurce\\28 AUG-java\\file\\Test.txt";
 		
 		 try {
-	            FileInputStream in = new FileInputStream(SourceFile);
-	            FileOutputStream out = new FileOutputStream(destinationFile);
+	            FileReader fr = new FileReader(SourceFile);
+	            FileWriter fw = new FileWriter(destinationFile);
 
 	            int data;
-	            while ((data = in.read()) != -1) {
-	                out.write(data);
+	            while ((data = fr.read()) != -1) {
+	                fw.write(data);
 	            }
 
-	            in.close();
-	            out.close();
+	            fr.close();
+	            fw.close();
 
 	            System.out.println("File copied successfully");
 

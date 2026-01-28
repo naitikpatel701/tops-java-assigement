@@ -3,12 +3,12 @@ package Controller;
 import java.io.IOException;
 
 import Dao.StudentDao;
-import Model.Student;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import model.Student;
 
 @WebServlet("/reg")
 public class Servlet_1 extends HttpServlet{

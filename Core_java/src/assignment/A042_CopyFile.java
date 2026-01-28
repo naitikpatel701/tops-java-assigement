@@ -13,24 +13,24 @@ public class A042_CopyFile {
 		
 		  
 		   try {
-			   FileOutputStream  out = new FileOutputStream(SourcePath);
+			   FileOutputStream  fos = new FileOutputStream(SourcePath);
 			
 			String s="this is my first io practical";
 			byte b[]=s.getBytes();
-			out.write(b);
-			out.close();
+			fos.write(b);
+			fos.close();
 		     
 
 		        System.out.println("Done");
 		        
-		        FileInputStream in = new FileInputStream(SourcePath);
-				FileOutputStream out2 = new FileOutputStream(destPath);
+		        FileInputStream fis = new FileInputStream(SourcePath);
+				FileOutputStream fos2 = new FileOutputStream(destPath);
 					  int ch;
-				        while ((ch = in.read()) != -1)
-				            out2.write(ch);
+				        while ((ch = fis.read()) != -1)
+				            fos2.write(ch);
 				        
-				        in.close();
-				        out2.close();
+				        fis.close();
+				        fos2.close();
 				        
 				        System.out.println("File copied successfully");
 		
