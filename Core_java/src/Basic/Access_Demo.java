@@ -1,8 +1,8 @@
 package Basic;
 
-import assignment.A028_Access;
+import OOPs.Access;
 
-public class Access_Demo extends A028_Access{
+public class Access_Demo extends Access{
 	
 	public void show() {
 		
@@ -10,7 +10,7 @@ public class Access_Demo extends A028_Access{
 	}
 	public static void main(String[] args) {
 		
-		A028_Access ac=new A028_Access();
+		Access ac=new Access();
 		ac.disp();
 	}
 

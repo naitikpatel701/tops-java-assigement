@@ -10,7 +10,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import model.Student;
 
-@WebServlet("/reg")
+@WebServlet ("/reg")
 public class Servlet_1 extends HttpServlet{
 	private static final long serialversionuid=1L;
 	

@@ -37,7 +37,7 @@ public class Servlet_1 extends HttpServlet {
 		int i = dao.addStudent(st);
 		if(i>0)
 		{
-			req.setAttribute("msg", "Regostration successfully");
+			req.setAttribute("msg", "Registration successfully");
 			req.getRequestDispatcher("index.jsp").forward(req, resp);
 		}
 		

@@ -64,4 +64,18 @@ public class StudentDao {
 		}
 		return al;
 	}
+	public int DeleteStudent(int id) {
+		int i=0;
+		
+		try {
+			PreparedStatement ps=cn.prepareStatement("delete from student where id=? ");
+			ps.setInt(1, id);
+			
+			i=ps.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return i;
+	}
 }

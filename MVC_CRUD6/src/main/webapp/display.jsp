@@ -1,4 +1,4 @@
-<%@page import="model.Student"%>
+<%@page import="Model.Student"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -22,22 +22,23 @@ integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJ
       <th>Name</th>
       <th>Email</th>
       <th>Phone</th>
-      <th>Action</th>
+      <th colspan="2">Action</th>
       </tr>
       
-      <%
-      
-      ArrayList<Student> al=(ArrayList)request.getAttribute("data");
-      for(Student st : al){%>
-    	 <tr>
-      <td><%=st.getId() %></td>
+     <%
+     ArrayList<Student> al=(ArrayList)request.getAttribute("data");
+     for(Student st : al)
+     {%>
+      <tr>
+      <td><%=st.getId() %>></td>
       <td><%=st.getName() %></td>
       <td><%=st.getEmail() %></td>
-      <td><%=st.getPhone() %></td>
+      <td><%=st.getPhone() %>></td>
+      <td><a href="Delete?sid<%=st.getId()%>" class="btn btn-denger">Delete</a></td>
       </tr>
-        
-     <%  }
-      %>
+     
+    <%}
+     %>
       </table>
       <a href="index.jsp" class="btn btn-success">back  to register</a>
       </div>

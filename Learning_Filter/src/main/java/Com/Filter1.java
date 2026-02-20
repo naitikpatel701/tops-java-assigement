@@ -14,7 +14,7 @@ import java.io.IOException;
  * Servlet Filter implementation class Filter1
  */
 @WebFilter("/Ser1")
-public class Filter1 extends HttpFilter implements Filter {
+public class Filter1 extends HttpFilter  implements Filter {
        
   @Override
 public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
