@@ -6,7 +6,7 @@ import java.math.BigDecimal;
 @Entity
 @Table(name = "order_items")
 public class OrderItem {
-	  @Id
+	    @Id
 	    @GeneratedValue(strategy = GenerationType.IDENTITY)
 	    private Long id;
 

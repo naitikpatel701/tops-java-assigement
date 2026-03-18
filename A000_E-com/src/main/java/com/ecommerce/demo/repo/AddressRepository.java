@@ -6,5 +6,5 @@ import com.ecommerce.demo.model.*;
 import java.util.List;
 
 public interface AddressRepository extends JpaRepository<Address, Long> {
-	 List<Address> findByUserId(Long userId);;
+	 List<Address> findByUser(User user);;
 }
