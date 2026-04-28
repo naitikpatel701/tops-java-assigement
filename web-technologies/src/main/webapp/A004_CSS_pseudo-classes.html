@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pseudo-Classes Example</title>
+
+    <style>
+        /* Navigation menu */
+        nav {
+            background-color: black;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            margin-right: 15px;
+            text-decoration: none;
+        }
+
+        /* Hover effect */
+        nav a:hover {
+            color: yellow;
+            text-decoration: underline;
+        }
+
+        /* Form styling */
+        input {
+            padding: 8px;
+            margin: 10px 0;
+        }
+
+        /* Focus effect */
+        input:focus {
+            border: 2px solid blue;
+            background-color: lightyellow;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav>
+    <a href="#">Home</a>
+    <a href="##">About</a>
+    <a href="#$">Contact</a>
+</nav>
+
+<hr>
+
+<!-- Form -->
+<h2>Login Form</h2>
+
+<form>
+    Name:<br>
+    <input type="text" placeholder="Enter name"><br>
+
+    Email:<br>
+    <input type="email" placeholder="Enter email"><br>
+
+    <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>

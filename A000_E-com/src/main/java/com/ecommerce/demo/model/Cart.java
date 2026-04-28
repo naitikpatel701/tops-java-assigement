@@ -2,17 +2,21 @@ package com.ecommerce.demo.model;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name = "carts")
 public class Cart {
-	 @Id
+	    @Id
 	    @GeneratedValue(strategy = GenerationType.IDENTITY)
 	    private Long id;
 
 	    @OneToOne
 	    @JoinColumn(name = "user_id", unique = true)
 	    private User user;
+	    
+	    @OneToMany(mappedBy = "cart")
+	    List<CartItem> items;
 
 	    private LocalDateTime createdAt = LocalDateTime.now();
 
@@ -39,6 +43,15 @@ public class Cart {
 		public void setCreatedAt(LocalDateTime createdAt) {
 			this.createdAt = createdAt;
 		}
+
+		public List<CartItem> getItems() {
+			return items;
+		}
+
+		public void setItems(List<CartItem> items) {
+			this.items = items;
+		}
 	    
+		
     
 }

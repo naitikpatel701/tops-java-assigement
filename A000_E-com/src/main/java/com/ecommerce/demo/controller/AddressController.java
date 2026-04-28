@@ -6,6 +6,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -33,6 +34,7 @@ public class AddressController {
 	@Autowired
 	ModelMapper mapper;
 	
+	 @PreAuthorize("hasAnyRole('ADMIN','USER')")
 	@PostMapping("/")
 	public ResponseEntity<AddressDto> create(@RequestBody AddressDto dto,@RequestParam("user") Long uid) {
 		
@@ -41,6 +43,7 @@ public class AddressController {
 		return new ResponseEntity<>(createdAddress,HttpStatus.CREATED);
 	}
 	
+	 @PreAuthorize("hasAnyRole('ADMIN','USER')")
 	@GetMapping("/")
 	public ResponseEntity<List<AddressDto>> list() {
 		
@@ -48,6 +51,7 @@ public class AddressController {
 		return new ResponseEntity<>(all,HttpStatus.OK);
 	}
 	
+	 @PreAuthorize("hasAnyRole('ADMIN','USER')")
 	@GetMapping("/{id}")
 	public ResponseEntity<AddressDto> retrive(@PathVariable("id") Long id) {
 		
@@ -55,6 +59,7 @@ public class AddressController {
 		return new ResponseEntity<>(address,HttpStatus.OK);
 	}
 	
+	 @PreAuthorize("hasAnyRole('ADMIN','USER')")
     @PutMapping("/{id}")
     public ResponseEntity<AddressDto> update(@RequestBody AddressDto dto,@RequestParam("user") Long uid,@PathVariable("id") Long id) {
     	
@@ -63,6 +68,7 @@ public class AddressController {
     	return new ResponseEntity<>(updated,HttpStatus.CREATED);
     }
     
+	 @PreAuthorize("hasAnyRole('ADMIN','USER')")
     @DeleteMapping("/{id}")
     public ResponseEntity<String> delete(@PathVariable("id") Long id) {
     	

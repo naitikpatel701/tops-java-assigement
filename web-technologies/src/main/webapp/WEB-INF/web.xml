@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         version="5.0">
+
+    <servlet>
+        <servlet-name>Servlet1</servlet-name>
+        <servlet-class>com.A006_Servlet1</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Servlet1</servlet-name>
+        <url-pattern>/headers</url-pattern>
+    </servlet-mapping>
+    
+      <servlet>
+        <servlet-name>HelloServlet</servlet-name>
+        <servlet-class>com.A007_HelloServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>HelloServlet</servlet-name>
+        <url-pattern>/HelloServlet</url-pattern>
+    </servlet-mapping>
+    
+      <servlet>
+        <servlet-name>Servlet</servlet-name>
+        <servlet-class>com.A009_Servlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Servlet</servlet-name>
+        <url-pattern>/Servlet</url-pattern>
+    </servlet-mapping>
+
+    
+     <servlet>
+        <servlet-name>SimpleServlet</servlet-name>
+        <servlet-class>com.A008_SimpleServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SimpleServlet</servlet-name>
+        <url-pattern>/SimpleServlet</url-pattern>
+    </servlet-mapping>
+     
+</web-app>

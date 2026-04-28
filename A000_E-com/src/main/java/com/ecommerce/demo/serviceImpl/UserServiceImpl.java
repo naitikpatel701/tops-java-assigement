@@ -1,6 +1,7 @@
 package com.ecommerce.demo.serviceImpl;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.modelmapper.ModelMapper;
@@ -74,6 +75,13 @@ public class UserServiceImpl implements UserService{
 			return mapper.map(u, UserDto.class);
 		}).collect(Collectors.toList());
 		return dtos;
+	}
+
+	@Override
+	public UserDto byUsername(String username) {
+		// TODO Auto-generated method stub
+		Optional<User> u=repo.findByName(username);
+		return mapper.map(u, UserDto.class);
 	}
 
 	

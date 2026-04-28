@@ -4,6 +4,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,6 +20,9 @@ import com.ecommerce.demo.service.CartItemService;
 import com.ecommerce.demo.service.CartService;
 import com.ecommerce.demo.service.ProductService;
 import com.ecommerce.demo.service.UserService;
+
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
 
 @RestController
 @RequestMapping("/carts")
@@ -39,12 +43,16 @@ public class CartController {
 	@Autowired
 	CartItemService cartItemService;
 	
+	@PreAuthorize("hasRole('USER')")
 	@PostMapping("/")
-	public ResponseEntity<CartItemDto> create(@RequestBody CartItemDto dto,@RequestParam("product") Long id) {
+	public ResponseEntity<CartItemDto> create(@RequestBody CartItemDto dto,@RequestParam("product") Long id,HttpServletRequest req) {
 		
 		dto.setProduct(productService.retrive(id));
 		
-		UserDto user=service.retrive(6l);
+		HttpSession session=req.getSession();
+		String username=(String) session.getAttribute("user");
+		
+		UserDto user = service.byUsername(username);
 		
 		CartDto isExist=cartService.cartbyUser(mapper.map(user, User.class));
 		if(isExist==null) {
@@ -60,10 +68,14 @@ public class CartController {
 		return new ResponseEntity<>(created,HttpStatus.CREATED);
 	}
 	
+	@PreAuthorize("hasRole('USER')")
 	@GetMapping("/")
-	public ResponseEntity<CartDto> list() {
+	public ResponseEntity<CartDto> list(HttpServletRequest req) {
 		
-		UserDto user=service.retrive(6l);
+		HttpSession session=req.getSession();
+		String username=(String) session.getAttribute("user");
+		
+		UserDto user=service.byUsername(username);
 		CartDto c=cartService.cartbyUser(mapper.map(user, User.class));
 		return new ResponseEntity<>(c,HttpStatus.OK);	
 	}	

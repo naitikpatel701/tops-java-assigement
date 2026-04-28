@@ -2,6 +2,7 @@ package com.ecommerce.demo.dto;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.List;
 
 import com.ecommerce.demo.model.OrderStatus;
 import com.ecommerce.demo.model.PaymentType;
@@ -16,6 +17,7 @@ public class OrderDto {
     private BigDecimal totalAmount;
     private OrderStatus orderStatus = OrderStatus.PENDING;
     private LocalDateTime createdAt = LocalDateTime.now();
+    private List<OrderItemDtoView> items;
 	public Long getId() {
 		return id;
 	}
@@ -63,6 +65,12 @@ public class OrderDto {
 	}
 	public void setCreatedAt(LocalDateTime createdAt) {
 		this.createdAt = createdAt;
+	}
+	public List<OrderItemDtoView> getItems() {
+		return items;
+	}
+	public void setItems(List<OrderItemDtoView> items) {
+		this.items = items;
 	}
     
 }

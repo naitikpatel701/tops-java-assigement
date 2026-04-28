@@ -3,6 +3,7 @@ package com.ecommerce.demo.model;
 import jakarta.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name = "orders")
@@ -29,6 +30,9 @@ public class Order {
 	    private OrderStatus orderStatus = OrderStatus.PENDING;
 
 	    private LocalDateTime createdAt = LocalDateTime.now();
+	    
+	    @OneToMany(mappedBy = "order")
+	    List<OrderItem> items;
 
 		public Long getId() {
 			return id;
@@ -93,5 +97,13 @@ public class Order {
 		public void setCreatedAt(LocalDateTime createdAt) {
 			this.createdAt = createdAt;
 		}
-    
+
+		public List<OrderItem> getItems() {
+			return items;
+		}
+
+		public void setItems(List<OrderItem> items) {
+			this.items = items;
+		}
+        
 }
